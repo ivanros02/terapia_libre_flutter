@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
       title: 'Terapia Libre',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        // Define textTheme for your app, although it won't affect WebView text
       ),
       home: MyHomePage(),
       debugShowCheckedModeBanner: false,
@@ -38,9 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ..setNavigationDelegate(NavigationDelegate(
         onPageStarted: (String url) {
           print("Loading: $url");
-        },
-        onPageFinished: (String url) {
-          print("Finished loading: $url");
         },
       ))
       ..loadRequest(Uri.parse('https://terapialibre.com.ar/'));
